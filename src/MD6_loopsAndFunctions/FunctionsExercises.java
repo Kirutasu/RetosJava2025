@@ -2,6 +2,8 @@ package MD6_loopsAndFunctions;
 
 import javax.swing.*;
 import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class FunctionsExercises {
 
@@ -40,7 +42,26 @@ public class FunctionsExercises {
         }
         System.out.println("La media de este array es: " + mediaArray(enteros));
 
+        //9
+        long factorial = Integer.parseInt(JOptionPane.showInputDialog("Dame un entero para calcular su factorial:"));
+        if (factorial < 0) {
+            System.out.println("No existe factorial de números negativos");
+        } else {
+            System.out.println("El factorial de: " + factorial + " es: " + factorialNumeroDado(factorial));
+        }
+
+        //10
+        ArrayList<String> nombres = new ArrayList<>();
+        nombres.add(JOptionPane.showInputDialog("Dame un nombre:"));
+        nombres.add(JOptionPane.showInputDialog("Dame otro nombre:"));
+        nombres.add(JOptionPane.showInputDialog("Dame otro nombre:"));
+        nombres.add(JOptionPane.showInputDialog("Dame un ultimo nombre"));
+
+        recorreArray(nombres);
+
+
     }
+
 
 
     // 1. Crea una función que imprima "¡Te doy la bienvenida al curso de Java desde cero!".
@@ -96,9 +117,21 @@ public class FunctionsExercises {
             contadorArray++;
         }
         return suma / contadorArray;
-
-        // 9. Escribe un método que reciba un número y retorna su factorial.
-
-        // 10. Crea una función que reciba un ArrayList<String> y lo recorra mostrando cada elemento.
     }
+
+    // 9. Escribe un método que reciba un número y retorna su factorial.
+    public static long factorialNumeroDado(long numeroFactorial) {
+        long resultado = 1;
+        for (long j = numeroFactorial; j > 1; j--) {
+            resultado *= j;
+        }
+        return resultado;
+    }
+    // 10. Crea una función que reciba un ArrayList<String> y lo recorra mostrando cada elemento.
+    public static void recorreArray (ArrayList<String> nombres) {
+        for (String nombre : nombres) {
+            System.out.println(nombre);
+        }
+    }
+
 }

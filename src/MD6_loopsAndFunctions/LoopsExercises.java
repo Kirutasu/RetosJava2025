@@ -104,7 +104,6 @@ public class LoopsExercises {
         long resultado=1;
         if (factorial < 0) {
             System.out.println("No existe factorial de números negativos");
-            return;
         }
         for (long j = factorial; j > 1;  j--) {
             resultado *= j;
