@@ -1,12 +1,6 @@
-package basic.c06_loops;
-
-/*
-Clase 5 - Bucles y funciones (06/05/2025)
-Vídeo: https://www.twitch.tv/videos/2452053839
-*/
+package MD6_loopsAndFunctions;
 
 import javax.swing.*;
-import javax.xml.transform.Source;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
